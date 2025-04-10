@@ -42,8 +42,8 @@ testem.log
 Thumbs.db
 
 # Firebitch
-.firebase/*
-.angular/*
+.firebase/
+.angular/
 
 # Seacrest
 src/environments
