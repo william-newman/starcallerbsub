@@ -1,3 +1,8 @@
+@keyframes jump {
+  from { bottom: 12vh; opacity: 60%;}
+  to { bottom: 10vh; opacity: 100%;}
+}
+
 .photography-container {
   background-color: black;
   position: absolute;
@@ -15,6 +20,22 @@
 
 .content-wrapper {
   min-height: 100%;
+}
+
+.scroll-hinter {
+  position: fixed;
+  border-radius: 50%;
+  bottom: 10vh;
+  right: 5vw;
+  height: 40px;
+  width: 40px;
+  background: rgba($color: #f8f8f8, $alpha: 0.1) url(../../../assets/down-arrow.png) center center;
+  background-size: contain;
+  z-index: 3;
+  animation-name: jump;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 .photo-container {
