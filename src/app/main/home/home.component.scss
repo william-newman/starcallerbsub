@@ -1,0 +1,28 @@
+.home-container {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 90vw;
+  background: aliceblue url(../../../assets/z30_the-dippers-maybe.JPG) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.soon {
+  font-family: "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow",
+    sans-serif;
+  font-size: 4em;
+  display: block;
+  position: absolute;
+  top: 40vh;
+  left: 40vw;
+  height: fit-content;
+  width: fit-content;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  text-align: center;
+  z-index: 3;
+}
