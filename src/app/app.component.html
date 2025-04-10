@@ -1,8 +1,24 @@
-<div class="topnav">
-  <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-  <a routerLink="/dj" ariaCurrentWhenActive="page">DJing</a>
-  <a routerLink="/photography" ariaCurrentWhenActive="page">Photography</a>
-  <a routerLink="/labs" ariaCurrentWhenActive="page">Labs</a>
-</div>
+<table class="topnav">
+  <tbody>
+    <tr>
+      <td id="left-align">
+        <a class="topnav-links" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" id="main-header-link">BSUB</a>
+      </td>
+      <td>
+        <a class="topnav-links" routerLink="/dj" ariaCurrentWhenActive="page">DJ</a>
+      </td>
+      <td>
+        <a class="topnav-links" routerLink="/photography" ariaCurrentWhenActive="page">Photography</a>
+      </td>
+      <td>
+        <a class="topnav-links" id="disabled-link" routerLink="/labs" ariaCurrentWhenActive="page">Labs</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <router-outlet></router-outlet>
+
+<a class="version-footer" routerLink="/version-history" ariaCurrentWhenActive="page">
+  v0.1.1
+</a>

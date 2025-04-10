@@ -1,5 +1,11 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
 
-
-.strikethrough {
+#disabled-link {
+    color: gray;
+    cursor: none;
+    pointer-events: none;
     text-decoration: line-through;
 }
