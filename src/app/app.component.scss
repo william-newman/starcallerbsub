@@ -4,6 +4,7 @@
   width: 100vw;
   overflow: hidden;
   background-color: #333;
+  font-family: 'Carrois Gothic SC', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 tr {
@@ -32,6 +33,7 @@ td {
   width: 25vw;
   padding: 10px;
   color: #f2f2f2;
+  text-shadow: 3px 3px 3px rgb(52, 218, 255);
   text-decoration: none;
   font-size: 3em;
 }
@@ -47,7 +49,8 @@ td {
 }
 
 #main-header-link {
-  color: red;
+  color: color-mix(in srgb, rgb(85, 0, 127) 80%, rgb(123, 123, 123) 20%);
+  text-shadow: 3px 3px 3px rgb(52, 218, 255);
   font-size: 6em;
   text-align: left;
 }
