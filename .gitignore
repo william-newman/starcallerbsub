@@ -40,3 +40,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Firebitch
+.firebase/*
+.angular/*
+
+# Seacrest
+src/environments
