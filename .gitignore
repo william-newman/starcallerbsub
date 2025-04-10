@@ -46,4 +46,5 @@ Thumbs.db
 .angular/
 
 # Seacrest
-src/environments
+src/environments/
+src/assets/
