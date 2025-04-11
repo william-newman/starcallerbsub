@@ -1,3 +1,68 @@
 <div class="dj-container">
-    <div class="dj-main"></div>    
+  <div class="booking" id="booking-module">
+    <div class="booking" id="contact-info">
+      Email:
+      <a
+        href="mailto:booking@djbsub.com"
+        class="links"
+        id="contact_info_email_link"
+        >booking&#64;djbsub.com</a
+      >
+    </div>
+    <div class="booking" id="booking-request-form">
+      <form action="" #djBookingForm>
+        <div class="form-field-group">
+          <label for="customerName">Full Name</label><br />
+          <input type="text" name="customerName" id="customer_name" />
+
+          <label for="customerTelephone">Contact Telephone</label><br />
+          <input type="tel" name="customerTelephone" id="customer_telephone" />
+        </div>
+
+        <div class="form-field-group">
+          <label for="eventType">Type of Event:</label><br />
+          <select name="eventType" id="eventType">
+            <option default value="wedding">Wedding</option>
+            <option value="birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="concert">Concert</option>
+            <option value="unspecified">Other celebration</option>
+          </select>
+
+          <label for="surprise" class="label">Surprise event?</label>
+          <input type="checkbox" name="surprise" id="toggle_surprise" />
+
+          <label for="attendeeCount">Approximate Total Guests</label><br />
+          <input type="number" name="attendeeCount" id="attendee_count" />
+        </div>
+
+        <div class="form-field-group">
+          <label for="venue">Event Location Street Address</label><br />
+          <input type="text" name="venue" id="venue" /><br />
+          <label for="venueCity">Location City</label><br />
+          <input type="text" name="venueCity" id="venue-city" /><br />
+          <label for="venueZip">Location Zip Code</label><br />
+          <input type="text" name="venueZip" id="venue-zip" />
+        </div>
+
+        <div class="form-field-group">
+          <label for="eventDatetime">Date</label><br />
+          <input type="date" name="eventDatetime" id="event_datetime" /><br />
+
+          <label for="startTime">Start Time</label><br />
+          <input type="time" name="startTime" id="start-time" /><br />
+
+          <label for="endTime">End Time</label><br />
+          <input type="time" name="endTime" id="end-time" />
+        </div>
+
+        <div class="form-field-group">
+          <label for="comments">Additional Comments:</label><br />
+          <textarea name="comments" id="comment_textarea"></textarea>
+        </div>
+
+        <input type="submit" value="Book My Request!" id="submit_form_button" />
+      </form>
+    </div>
+  </div>
 </div>
