@@ -9,6 +9,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  version = 'v0.2.3'
+  version = 'v0.2.4'
   
 }
