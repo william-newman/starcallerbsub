@@ -48,3 +48,7 @@ Thumbs.db
 # Seacrest
 src/environments/
 src/assets/
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
