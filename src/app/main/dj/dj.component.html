@@ -14,13 +14,45 @@
       <form action="" [formGroup]="djBookingRequestForm">
         <div class="form-field-group">
           <label for="customerName">Full Name [Required]</label><br />
-          <input type="text" formControlName="customerName" id="customer_name"/><br />
+          <input
+            type="text"
+            formControlName="customerName"
+            id="customer_name"
+          /><br />
 
           <label for="customerEmail">Contact Email [Required]</label><br />
-          <input type="tel" formControlName="customerEmail" id="customer_email"/><br />
+          <input
+            type="tel"
+            formControlName="customerEmail"
+            id="customer_email"
+          /><br />
 
-          <label for="customerTelephone">Contact Telephone [Recommended]</label><br />
-          <input type="tel" formControlName="customerTelephone" id="customer_telephone" />
+          <label for="customerTelephone">Contact Telephone [Recommended]</label
+          ><br />
+          <input
+            type="tel"
+            formControlName="customerTelephone"
+            id="customer_telephone"
+          />
+        </div>
+
+        <div class="form-field-group">
+          <label for="eventDatetime">Date [Required]</label><br />
+          <input
+            type="date"
+            formControlName="eventDatetime"
+            id="event_datetime"
+          /><br />
+
+          <label for="startTime">Start Time [Recommended]</label><br />
+          <input
+            type="time"
+            formControlName="startTime"
+            id="start-time"
+          /><br />
+
+          <label for="endTime">End Time [Recommended]</label><br />
+          <input type="time" formControlName="endTime" id="end-time" />
         </div>
 
         <div class="form-field-group">
@@ -30,48 +62,61 @@
             <option value="birthday">Birthday</option>
             <option value="Anniversary">Anniversary</option>
             <option value="concert">Concert</option>
-            <option value="unspecified">Other celebration</option>
-          </select><br />
+            <option value="unspecified">Other celebration</option></select
+          ><br />
 
           <label for="surprise" class="label">Surprise event?</label>
-          <input type="checkbox" formControlName="surprise" id="toggle_surprise" /><br />
+          <input
+            type="checkbox"
+            formControlName="surprise"
+            id="toggle_surprise"
+          /><br />
 
           <label for="attendeeCount">Approximate Total Guests</label><br />
-          <input type="number" formControlName="attendeeCount" id="attendee_count" />
+          <input
+            type="number"
+            formControlName="attendeeCount"
+            id="attendee_count"
+          />
         </div>
 
         <div class="form-field-group">
           <label for="venueStreet">Event Location Street Address</label><br />
           <input type="text" formControlName="venueStreet" id="venue" /><br />
           <label for="venueCity">Location City</label><br />
-          <input type="text" formControlName="venueCity" id="venue-city" /><br />
+          <input
+            type="text"
+            formControlName="venueCity"
+            id="venue-city"
+          /><br />
           <label for="venueZip">Location Zip Code</label><br />
           <input type="text" formControlName="venueZip" id="venue-zip" />
         </div>
 
         <div class="form-field-group">
-          <label for="eventDatetime">Date [Required]</label><br />
-          <input type="date" formControlName="eventDatetime" id="event_datetime" /><br />
-
-          <label for="startTime">Start Time [Recommended]</label><br />
-          <input type="time" formControlName="startTime" id="start-time" /><br />
-
-          <label for="endTime">End Time [Recommended]</label><br />
-          <input type="time" formControlName="endTime" id="end-time" />
-        </div>
-
-        <div class="form-field-group">
           <label for="comments">Additional Comments:</label><br />
-          <textarea formControlName="comments" id="comment-textarea" placeholder="Additional requirements, notes, requests, etc."></textarea>
+          <textarea
+            formControlName="comments"
+            id="comment-textarea"
+            placeholder="Additional requirements, notes, requests, etc."
+          ></textarea>
         </div>
 
-        <input type="submit" value="Book My Request!" id="submit_form_button" (click)="submitDjForm()" [disabled]="!djBookingRequestForm.valid"/>
+        <input
+          type="submit"
+          value="Book My Request!"
+          id="submit_form_button"
+          (click)="submitDjForm()"
+          [disabled]="!djBookingRequestForm.valid"
+        />
         <!-- <input type="submit" value="Reset Form" id="reset_form_button" (click)="resetDjForm()" /> -->
       </form>
     </div>
-  }
-  @if (hasBooked) {
-    <div> Thank you for booking with BSUB! <br /> You will receive a reply shortly. </div>
-  }
+    } @if (hasBooked) {
+    <div>
+      Thank you for booking with BSUB! <br />
+      You will receive a reply shortly.
+    </div>
+    }
   </div>
 </div>

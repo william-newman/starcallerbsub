@@ -14,15 +14,15 @@ export class DjComponent {
     customerName: new FormControl('', Validators.required),
     customerEmail: new FormControl('', Validators.required),
     customerTelephone: new FormControl(''),
+    eventDatetime: new FormControl('', Validators.required),
+    startTime: new FormControl(''),
+    endTime: new FormControl(''),
     eventType: new FormControl(''),
     surprise: new FormControl(''),
     attendeeCount: new FormControl(''),
     venueStreet: new FormControl(''),
     venueCity: new FormControl(''),
     venueZip: new FormControl(''),
-    eventDatetime: new FormControl('', Validators.required),
-    startTime: new FormControl(''),
-    endTime: new FormControl(''),
     comments: new FormControl('')
   });
   hasBooked = false;
@@ -34,7 +34,7 @@ export class DjComponent {
 
     successState.catch((e) => {
       console.log(e);
-
+      this.hasBooked = false;
     }).finally(() => {
       this.hasBooked = true;
 

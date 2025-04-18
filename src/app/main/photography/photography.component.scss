@@ -1,128 +1,264 @@
 @keyframes jump {
-  from { bottom: 12vh; opacity: 60%;}
-  to { bottom: 10vh; opacity: 100%;}
+  from {
+    bottom: 12vh;
+    opacity: 60%;
+  }
+  to {
+    bottom: 10vh;
+    opacity: 100%;
+  }
 }
 
-.photography-container {
-  background-color: black;
-  position: absolute;
-  top: 10vh;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 90vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+@media only screen and (max-width: 600px) {
+  .photography-container {
+    background-color: black;
+    position: absolute;
+    top: 10vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .content-wrapper {
+    min-height: 100%;
+  }
+
+  .scroll-hinter {
+    position: fixed;
+    border-radius: 50%;
+    bottom: 10vh;
+    right: 5vw;
+    height: 40px;
+    width: 40px;
+    background: rgba($color: #f8f8f8, $alpha: 0.1)
+      url(../../../assets/down-arrow.png) center center;
+    background-size: contain;
+    z-index: 3;
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  .photo-container {
+    width: 100vw;
+    height: 30vh;
+    outline: solid black 1px;
+    pointer-events: none;
+  }
+
+  #z30_littleton-sunset {
+    background: black url(../../../assets/z30_littleton-sunset.JPG)
+      no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_bubbs-baffled {
+    background: black url(../../../assets/z30_bubs_baffled_by_wires.JPG)
+      no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_radio-twilight {
+    background: black url(../../../assets/z30_radio-twilight.JPG) no-repeat
+      center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_mountain-river {
+    background: black url(../../../assets/z30_mountain-river.JPG) no-repeat
+      center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_centennial-sunset {
+    background: black url(../../../assets/z30_centennial-sunset.JPG)
+      no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_bear-creek-trail {
+    background: black url(../../../assets/z30_bear-creek-trail.JPG)
+      no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_bubbs-the-gentleman {
+    background: black url(../../../assets/z30_bubbs-the-gentleman.JPG)
+      no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_vegas_starcaller-banner_fixed {
+    background: black
+      url(../../../assets/z30_vegas_starcaller-banner_fixed.JPG) no-repeat
+      center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  #z30_bubs-title-screen {
+    background: black url(../../../assets/z30_bubs-title-screen.JPG)
+      no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
 }
 
-.content-wrapper {
-  min-height: 100%;
-}
+@media only screen and (min-width: 601px) {
+  .photography-container {
+    background-color: black;
+    position: absolute;
+    top: 10vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 
-.scroll-hinter {
-  position: fixed;
-  border-radius: 50%;
-  bottom: 10vh;
-  right: 5vw;
-  height: 40px;
-  width: 40px;
-  background: rgba($color: #f8f8f8, $alpha: 0.1) url(../../../assets/down-arrow.png) center center;
-  background-size: contain;
-  z-index: 3;
-  animation-name: jump;
-  animation-duration: 1s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-}
+  .content-wrapper {
+    min-height: 100%;
+  }
 
-.photo-container {
-  width: 100vw;
-  height: 100vh;
-  outline: solid black 1px;
-  pointer-events: none;
-}
+  .scroll-hinter {
+    position: fixed;
+    border-radius: 50%;
+    bottom: 10vh;
+    right: 5vw;
+    height: 40px;
+    width: 40px;
+    background: rgba($color: #f8f8f8, $alpha: 0.1)
+      url(../../../assets/down-arrow.png) center center;
+    background-size: contain;
+    z-index: 3;
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
 
-#z30_littleton-sunset {
-  background: aliceblue url(../../../assets/z30_littleton-sunset.JPG) no-repeat
-    center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  .photo-container {
+    width: 100vw;
+    height: 100vh;
+    outline: solid black 1px;
+    pointer-events: none;
+  }
 
-#z30_bubbs-baffled {
-  background: aliceblue url(../../../assets/z30_bubs_baffled_by_wires.JPG)
-    no-repeat center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  #z30_littleton-sunset {
+    background: black url(../../../assets/z30_littleton-sunset.JPG)
+      no-repeat center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 
-#z30_radio-twilight {
-  background: aliceblue url(../../../assets/z30_radio-twilight.JPG) no-repeat
-    center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  #z30_bubbs-baffled {
+    background: black url(../../../assets/z30_bubs_baffled_by_wires.JPG)
+      no-repeat center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 
-#z30_mountain-river {
-  background: aliceblue url(../../../assets/z30_mountain-river.JPG) no-repeat
-    center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  #z30_radio-twilight {
+    background: black url(../../../assets/z30_radio-twilight.JPG) no-repeat
+      center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 
-#z30_centennial-sunset {
-  background: aliceblue url(../../../assets/z30_centennial-sunset.JPG) no-repeat
-    center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  #z30_mountain-river {
+    background: black url(../../../assets/z30_mountain-river.JPG) no-repeat
+      center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 
-#z30_bear-creek-trail {
-  background: aliceblue url(../../../assets/z30_bear-creek-trail.JPG) no-repeat
-    center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  #z30_centennial-sunset {
+    background: black url(../../../assets/z30_centennial-sunset.JPG)
+      no-repeat center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 
-#z30_bubbs-the-gentleman {
-  background: aliceblue url(../../../assets/z30_bubbs-the-gentleman.JPG)
-    no-repeat center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  #z30_bear-creek-trail {
+    background: black url(../../../assets/z30_bear-creek-trail.JPG)
+      no-repeat center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 
-#z30_vegas_starcaller-banner_fixed {
-  background: aliceblue
-    url(../../../assets/z30_vegas_starcaller-banner_fixed.JPG) no-repeat center
-    center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
-}
+  #z30_bubbs-the-gentleman {
+    background: black url(../../../assets/z30_bubbs-the-gentleman.JPG)
+      no-repeat center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 
-#z30_bubs-title-screen {
-  background: aliceblue url(../../../assets/z30_bubs-title-screen.JPG) no-repeat
-    center center fixed;
-  -webkit-background-size: 100vw 100vh;
-  -moz-background-size: 100vw 100vh;
-  -o-background-size: 100vw 100vh;
-  background-size: 100vw 100vh;
+  #z30_vegas_starcaller-banner_fixed {
+    background: black
+      url(../../../assets/z30_vegas_starcaller-banner_fixed.JPG) no-repeat
+      center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
+
+  #z30_bubs-title-screen {
+    background: black url(../../../assets/z30_bubs-title-screen.JPG)
+      no-repeat center center fixed;
+    -webkit-background-size: 100vw 100vh;
+    -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+    background-size: 100vw 100vh;
+  }
 }

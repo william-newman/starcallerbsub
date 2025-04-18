@@ -1,5 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-photography',
@@ -11,6 +10,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class PhotographyComponent {
   hasScrolled = false;
   hasTriggered = false;
+
 
   toggleScrollHinter(bool: boolean) {
     if (!this.hasTriggered) {
