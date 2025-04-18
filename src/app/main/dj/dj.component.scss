@@ -23,7 +23,7 @@
   }
 
   #contact-info {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 2vh auto;
     width: 70%;
   }
@@ -35,7 +35,8 @@
   #booking-request-form {
     margin: 2vh auto;
     width: 90%;
-    height: fit-content;
+    height: 70vh;
+    overflow-y: scroll;
   }
 
   .booking {
