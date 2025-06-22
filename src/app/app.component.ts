@@ -14,12 +14,14 @@ export class AppComponent {
   version = '';
   innerWidth = 0;
   innerHeight = 0;
+  sidebarToggled: boolean;
   burgerForm = new FormGroup({
     hamburgerCheck: new FormControl(false)
   });
 
   constructor() {
     this.version = `v` + this.packageVersion;
+    this.sidebarToggled = false;
     
     afterNextRender(() => {
       if (window?.MediaDeviceInfo) {
@@ -39,5 +41,8 @@ export class AppComponent {
     this.burgerForm.setValue({
       hamburgerCheck: !this.burgerForm.value.hamburgerCheck?.valueOf()
     });
+    this.sidebarToggled = !this.sidebarToggled;
+    console.log(this.sidebarToggled);
+    
   }
 }

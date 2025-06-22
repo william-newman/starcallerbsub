@@ -1,56 +1,16 @@
-<table class="topnav">
-  <tbody>
-    <tr>
-      @if (innerWidth <= 600) {
-      <td>
-        <span class="background-for-hamburger"></span>
-        <div class="hamburger-menu" [formGroup]="burgerForm">
-          <input id="menu__toggle" type="checkbox" formControlName="hamburgerCheck"/>
-          <label class="menu__btn" for="menu__toggle">
-            <span></span>
-          </label>
+<div class="topnav">
+          <div class="menu-nav-button" id="menu-button" (click)="toggleCheckbox()">MENU</div>
 
-          <ul class="menu__box">
-            <li><a class="menu__item" routerLink="/" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Home</a></li>
-            <li><a class="menu__item" routerLink="/dj" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>DJ Booking</a></li>
-            <li><a class="menu__item" routerLink="/photography" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Photography</a></li>
-            <li><a class="menu__item" routerLink="/labs" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Labs</a></li>
-          </ul>
-        </div>
-      </td>
-      } @if (innerWidth > 600) {
-      <td id="left-align">
-        <a
-          class="topnav-links"
-          routerLink="/"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          id="main-header-link"
-          >BSUB</a
-        >
-      </td>
-      <td>
-        <a class="topnav-links" routerLink="/dj" ariaCurrentWhenActive="page"
-          >DJ</a
-        >
-      </td>
-      <td>
-        <a
-          class="topnav-links"
-          routerLink="/photography"
-          ariaCurrentWhenActive="page"
-          >Photography</a
-        >
-      </td>
-      <td>
-        <a class="topnav-links" routerLink="/labs" ariaCurrentWhenActive="page"
-          >Labs</a
-        >
-      </td>
-      }
-    </tr>
-  </tbody>
-</table>
+          @if (sidebarToggled) {
+            <ul class="menu-box">
+              <li><a class="menu-item" routerLink="/" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Home</a></li>
+              <li><a class="menu-item" routerLink="/dj" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>DJ Booking</a></li>
+              <li><a class="menu-item" routerLink="/photography" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Photography</a></li>
+              <li><a class="menu-item" routerLink="/labs" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Labs</a></li>
+            </ul>
+            <div class="click-container" (click)="toggleCheckbox()"></div>
+          }
+</div>
 
 <router-outlet></router-outlet>
 
