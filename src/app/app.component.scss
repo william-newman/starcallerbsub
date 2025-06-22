@@ -1,74 +1,32 @@
 @media only screen and (max-width: 600px) {
-  .background-for-hamburger {
+  // TODO: fix mobile navbutton bkg
+  .menu-nav-button {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 10vh;
+    font-family: "Carrois Gothic SC", "Franklin Gothic Medium", "Arial Narrow",
+      sans-serif;
+    text-shadow: 1px 1px whitesmoke;
+    background-color: #2a2a2a36;
+    top: 0px;
+    left: 0px;
+    padding: 2vh 2vw;
     width: 100vw;
-    z-index: -100;
-    background: linear-gradient(to right, rgb(81, 1, 116), #03729e);
-  }
-
-  #menu__toggle {
-    opacity: 0;
-  }
-
-  #menu__toggle:checked + .menu__btn > span {
-    transform: rotate(45deg);
-  }
-
-  #menu__toggle:checked + .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-  }
-
-  #menu__toggle:checked + .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-
-  #menu__toggle:checked ~ .menu__box {
-    left: 0 !important;
-  }
-  .menu__btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 26px;
-    height: 26px;
+    height: 6vh;
     cursor: pointer;
+    font-size: 3em;
     z-index: 6;
   }
 
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #000000;
-    transition-duration: 0.25s;
-  }
-  .menu__btn > span::before {
-    content: "";
-    top: -8px;
-  }
-
-  .menu__btn > span::after {
-    content: "";
-    top: 8px;
-  }
-
-  .menu__box {
+  .menu-box {
+    font-family: "Carrois Gothic SC", "Franklin Gothic Medium", "Arial Narrow",
+      sans-serif;
     display: block;
     position: fixed;
     top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100%;
+    left: 0;
+    width: 100vw;
+    height: fit-content;
     margin: 0;
-    padding: 80px 0;
+    padding: 10vh 0 0 20px;
     list-style: none;
     background-color: #2c003a;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -76,7 +34,8 @@
     z-index: 5;
   }
 
-  .menu__item {
+  .menu-item {
+    text-shadow: 1px 1px #000000;
     display: block;
     padding: 12px 24px;
     color: #afafaf;
@@ -88,8 +47,18 @@
     transition-duration: 0.25s;
   }
 
-  .menu__item:hover {
+  .menu-item:hover {
     background-color: rgba($color: #5ffcff, $alpha: 0.4);
+  }
+
+  .click-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    background-color: #2c003a47;
   }
 
   .version-footer {
@@ -107,7 +76,8 @@
     height: 10vh;
     width: 100vw;
     overflow: hidden;
-    background-color: #333;
+    // background-color: #2a2a2a36;
+    background-image: linear-gradient(to right,#2a2a2a36 15%, #00000000 18% 100%);
     font-family: "Carrois Gothic SC", "Franklin Gothic Medium", "Arial Narrow",
       sans-serif;
     z-index: 1;
@@ -117,12 +87,13 @@
     position: fixed;
     font-family: "Carrois Gothic SC", "Franklin Gothic Medium", "Arial Narrow",
       sans-serif;
-    text-shadow: 1px 1px whitesmoke;
-    background-color: #33333313;
+      color: #246d90;
+    text-shadow: 2px 2px 6px rgb(70, 70, 70);
+    // background-color: #435c7b85;
     top: 0px;
     left: 0px;
-    padding: 2vh 20px;
-    width: 300px;
+    padding: 2vh 2vw;
+    width: 11vw;
     height: 6vh;
     cursor: pointer;
     font-size: 3em;
@@ -136,12 +107,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 13vw;
     height: 90vh;
     margin: 0;
-    padding: 10vh 0 0 20px;
+    padding: 10vh 0 0 2vw;
     list-style: none;
-    background-color: #2c003a;
+    background-color: #320059;
+    background-image: linear-gradient(#320059, rgb(15, 48, 131));
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
     z-index: 5;

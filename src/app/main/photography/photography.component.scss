@@ -13,10 +13,11 @@
   .photography-container {
     background-color: black;
     position: absolute;
-    top: 10vh;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 10vh 0 0 0;
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -140,10 +141,11 @@
   .photography-container {
     background-color: black;
     position: absolute;
-    top: 10vh;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 10vh 0 0 0;
     display: flex;
     flex-direction: column;
     width: 100vw;
