@@ -50,10 +50,6 @@
     text-align: center;
   }
 
-  .form-field-group {
-    // todo
-  }
-
   input, select, textarea {
     margin-bottom: 9px;
     min-width: 50%;
@@ -127,5 +123,11 @@
   #comment-textarea {
     width: 100%;
     height: fit-content;
+  }
+
+  input, select, textarea {
+    min-height: 18px;
+    margin-bottom: 9px;
+    min-width: 30%;
   }
 }

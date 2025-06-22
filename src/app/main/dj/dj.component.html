@@ -1,7 +1,7 @@
 <div class="dj-container">
   <div class="booking" id="booking-module">
     <div class="booking" id="contact-info">
-      Email:
+      Contact:
       <a
         href="mailto:booking@djbsub.com"
         class="links"
@@ -9,25 +9,26 @@
         >booking&#64;djbsub.com</a
       >
     </div>
+    <hr />
     @if (!hasBooked) {
     <div class="booking" id="booking-request-form">
       <form action="" [formGroup]="djBookingRequestForm">
         <div class="form-field-group">
-          <label for="customerName">Full Name [Required]</label><br />
+          <label class="field-label" for="customerName">Contact Name</label><br />
           <input
             type="text"
             formControlName="customerName"
             id="customer_name"
           /><br />
 
-          <label for="customerEmail">Contact Email [Required]</label><br />
+          <label class="field-label" for="customerEmail">Contact Email</label><br />
           <input
             type="tel"
             formControlName="customerEmail"
             id="customer_email"
           /><br />
 
-          <label for="customerTelephone">Contact Telephone [Recommended]</label
+          <label class="field-label" for="customerTelephone">Contact Telephone</label
           ><br />
           <input
             type="tel"
@@ -37,26 +38,26 @@
         </div>
 
         <div class="form-field-group">
-          <label for="eventDatetime">Date [Required]</label><br />
+          <label class="field-label" for="eventDatetime">Date</label><br />
           <input
             type="date"
             formControlName="eventDatetime"
             id="event_datetime"
           /><br />
 
-          <label for="startTime">Start Time [Recommended]</label><br />
+          <!-- <label class="field-label" for="startTime">Start Time [Recommended]</label><br />
           <input
             type="time"
             formControlName="startTime"
             id="start-time"
           /><br />
 
-          <label for="endTime">End Time [Recommended]</label><br />
-          <input type="time" formControlName="endTime" id="end-time" />
+          <label class="field-label" for="endTime">End Time [Recommended]</label><br />
+          <input type="time" formControlName="endTime" id="end-time" /> -->
         </div>
 
         <div class="form-field-group">
-          <label for="eventType">Type of Event:</label><br />
+          <label class="field-label" for="eventType">Type of Event:</label><br />
           <select formControlName="eventType" id="eventType">
             <option default value="wedding">Wedding</option>
             <option value="birthday">Birthday</option>
@@ -65,36 +66,36 @@
             <option value="unspecified">Other celebration</option></select
           ><br />
 
-          <label for="surprise" class="label">Surprise event?</label>
+          <!-- <label class="field-label" for="surprise" class="label">Surprise event?</label>
           <input
             type="checkbox"
             formControlName="surprise"
             id="toggle_surprise"
           /><br />
 
-          <label for="attendeeCount">Approximate Total Guests</label><br />
+          <label class="field-label" for="attendeeCount">Approximate Total Guests</label><br />
           <input
             type="number"
             formControlName="attendeeCount"
             id="attendee_count"
-          />
+          /> -->
         </div>
 
         <div class="form-field-group">
-          <label for="venueStreet">Event Location Street Address</label><br />
+          <label class="field-label" for="venueStreet">Event Location Street Address</label><br />
           <input type="text" formControlName="venueStreet" id="venue" /><br />
-          <label for="venueCity">Location City</label><br />
+          <!-- <label class="field-label" for="venueCity">Location City</label><br />
           <input
             type="text"
             formControlName="venueCity"
             id="venue-city"
-          /><br />
-          <label for="venueZip">Location Zip Code</label><br />
+          /><br /> -->
+          <label class="field-label" for="venueZip">Event Location Zip Code</label><br />
           <input type="text" formControlName="venueZip" id="venue-zip" />
         </div>
 
         <div class="form-field-group">
-          <label for="comments">Additional Comments:</label><br />
+          <label class="field-label" for="comments">Additional Comments:</label><br />
           <textarea
             formControlName="comments"
             id="comment-textarea"
@@ -114,7 +115,7 @@
     </div>
     } @if (hasBooked) {
     <div>
-      Thank you for booking with BSUB! <br />
+      Thank you for your request!<br />
       You will receive a reply shortly.
     </div>
     }
