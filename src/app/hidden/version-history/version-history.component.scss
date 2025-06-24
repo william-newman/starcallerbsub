@@ -1,0 +1,32 @@
+.patch-notes {
+  position: fixed;
+  color: aliceblue;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 10vh 0 10vh 5vw;
+  margin: 0;
+  background-image: linear-gradient(rgb(0, 88, 59), rgb(0, 30, 57));
+  overflow-y: auto;
+}
+
+#patch-notes-header {
+    font-variant: small-caps;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.version-number {
+    color: bisque;
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
+    font-size: 20px;
+    padding-bottom: 4px;
+}
+
+.horizontal-rule {
+    display: block;
+    height: 10vh;
+    width: 100vw;
+}
