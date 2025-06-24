@@ -37,6 +37,7 @@
     margin: 2vh auto;
     width: 90%;
     height: 70vh;
+    overflow-x: hidden;
     overflow-y: scroll;
   }
 
@@ -60,7 +61,7 @@
   }
 
   #comment-textarea {
-    width: 100%;
+    width: 90%;
     height: fit-content;
   }
 }
