@@ -1,13 +1,59 @@
 import { afterNextRender, Component, HostListener } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, FormsModule, ReactiveFormsModule],
+  imports: [RouterLink, RouterOutlet, FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  animations: [
+    trigger(
+      'sidebarAnimation',
+      [
+        transition(
+          ':enter',
+          [
+            style({ width: 0, opacity: 0 }),
+            animate('500ms ease-out',
+              style({ width: '13vw', opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave',
+          [
+            style({ width: '13vw', opacity: 1 }),
+            animate('500ms ease-in',
+              style({ width: 0, opacity: 0 }))
+          ]
+        )
+      ]
+    ),
+    trigger(
+      'mobileSidebarAnimation',
+      [
+        transition(
+          ':enter',
+          [
+            style({ width: 0, opacity: 0 }),
+            animate('500ms ease-out',
+              style({ width: '100vw', opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave',
+          [
+            style({ width: '100vw', opacity: 1 }),
+            animate('500ms ease-in',
+              style({ width: 0, opacity: 0 }))
+          ]
+        )
+      ]
+    )
+  ]
 })
 export class AppComponent {
   packageVersion = require('../../package.json').version;
@@ -22,7 +68,7 @@ export class AppComponent {
   constructor() {
     this.version = `v` + this.packageVersion;
     this.sidebarToggled = false;
-    
+
     afterNextRender(() => {
       if (window?.MediaDeviceInfo) {
         this.innerWidth = window?.innerWidth;
@@ -37,12 +83,10 @@ export class AppComponent {
     this.innerHeight = window?.innerHeight;
   }
 
-  toggleCheckbox() {
+  toggleSidebar() {
     this.burgerForm.setValue({
       hamburgerCheck: !this.burgerForm.value.hamburgerCheck?.valueOf()
     });
     this.sidebarToggled = !this.sidebarToggled;
-    console.log(this.sidebarToggled);
-    
   }
 }

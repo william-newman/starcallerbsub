@@ -1,15 +1,88 @@
 <div class="topnav">
-          <div class="menu-nav-button" id="menu-button" (click)="toggleCheckbox()">MENU</div>
-
-          @if (sidebarToggled) {
-            <ul class="menu-box">
-              <li><a class="menu-item" routerLink="/" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Home</a></li>
-              <li><a class="menu-item" routerLink="/dj" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>DJ Booking</a></li>
-              <li><a class="menu-item" routerLink="/photography" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Photography</a></li>
-              <li><a class="menu-item" routerLink="/labs" ariaCurrentWhenActive="page" (click)='toggleCheckbox()'>Labs</a></li>
-            </ul>
-            <div class="click-container" (click)="toggleCheckbox()"></div>
-          }
+  <div class="menu-nav-button" id="menu-button" (click)="toggleSidebar()">
+    MENU
+  </div>
+  @if (innerWidth < 601) { @if (sidebarToggled) {
+  <ul class="menu-box" @mobileSidebarAnimation>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/dj"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >DJ Booking</a
+      >
+    </li>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/photography"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >Photography</a
+      >
+    </li>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/labs"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >Labs</a
+      >
+    </li>
+  </ul>
+  <div class="click-container" (click)="toggleSidebar()"></div>
+  } } @else { @if (sidebarToggled) {
+  <ul class="menu-box" @sidebarAnimation>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/dj"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >DJ Booking</a
+      >
+    </li>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/photography"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >Photography</a
+      >
+    </li>
+    <li>
+      <a
+        class="menu-item"
+        routerLink="/labs"
+        ariaCurrentWhenActive="page"
+        (click)="toggleSidebar()"
+        >Labs</a
+      >
+    </li>
+  </ul>
+  <div class="click-container" (click)="toggleSidebar()"></div>
+  } }
 </div>
 
 <router-outlet></router-outlet>
