@@ -1,0 +1,18 @@
+#social-link-list {
+  list-style-type: none;
+  position: fixed;
+  bottom: 20vh;
+  left: 1vw;
+  height: 10vh;
+  width: 100%;
+  z-index: 7;
+}
+
+.social-list-items {
+    padding-bottom: 8px;
+}
+
+.social-links {
+  color: #246d90;
+  font-size: 2em;
+}

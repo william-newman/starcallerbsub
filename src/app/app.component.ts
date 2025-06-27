@@ -1,13 +1,14 @@
-import { afterNextRender, Component, HostListener } from '@angular/core';
+import { afterNextRender, AfterViewInit, Component, HostListener } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { CommonModule } from '@angular/common';
+import { SocialsComponent } from './main/modules/socials/socials.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [RouterLink, RouterOutlet, FormsModule, ReactiveFormsModule, CommonModule, SocialsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
@@ -55,7 +56,7 @@ import { CommonModule } from '@angular/common';
     )
   ]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   packageVersion = require('../../package.json').version;
   version = '';
   innerWidth = 0;
@@ -64,6 +65,7 @@ export class AppComponent {
   burgerForm = new FormGroup({
     hamburgerCheck: new FormControl(false)
   });
+  window: any
 
   constructor() {
     this.version = `v` + this.packageVersion;
@@ -71,10 +73,16 @@ export class AppComponent {
 
     afterNextRender(() => {
       if (window?.MediaDeviceInfo) {
-        this.innerWidth = window?.innerWidth;
-        this.innerHeight = window?.innerHeight;
+        this.window = window;
       }
     });
+  }
+
+  ngAfterViewInit() {
+    if (this.window?.MediaDeviceInfo) {
+      this.innerWidth = this.window?.innerWidth;
+      this.innerHeight = this.window?.innerHeight;
+    }
   }
 
   @HostListener('window:resize', ['$event'])
