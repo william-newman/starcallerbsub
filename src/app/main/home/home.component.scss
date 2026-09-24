@@ -15,8 +15,8 @@
   }
 
   .soon {
-    font-family: "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow",
-      sans-serif;
+    font-family:
+      "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
     font-size: 4em;
     color: rgb(146, 117, 158);
     display: block;
@@ -37,8 +37,8 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 90vh;
-    padding: 10vh 0 0 0;
+    height: 100vh;
+    padding: 0;
     background: black url(../../../assets/z30_the-dippers-maybe.JPG) no-repeat
       center center fixed;
     -webkit-background-size: cover;
@@ -48,35 +48,83 @@
   }
 
   .soon {
-    font-family: "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow",
-      sans-serif;
+    font-family:
+      "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
     font-size: 4em;
     color: rgb(146, 117, 158);
     display: block;
     position: absolute;
-    top: 40vh;
+    top: 10vh;
     left: 40vw;
     height: fit-content;
     width: fit-content;
-    background-color: rgba($color: #000000, $alpha: 0.3);
     text-align: center;
     z-index: 3;
   }
 
   .article-1 {
-    font-family: "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow",
-      sans-serif;
-    font-size: 4em;
+    font-family:
+      "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    font-size: 1em;
     color: rgb(146, 117, 158);
+    padding: 0;
     display: block;
     position: absolute;
-    top: 15vh;
+    top: 5vh;
     left: 25vw;
     margin: auto;
-    height: 75vh;
+    height: 90vh;
     width: 50vw;
-    background-color: rgba($color: #000000, $alpha: 0.3);
     text-align: center;
     z-index: 3;
+  }
+
+  .player-row {
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    height: 25vh;
+    width: 90vw;
+    display: inline-flex;
+    z-index: 7;
+  }
+
+  #bc-player {
+    border: 0;
+    width: 200px;
+    height: 202px;
+  }
+
+  #starcaller-title {
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #social-link-list {
+    position: fixed;
+    bottom: 5vh;
+    left: 0;
+    height: 5vh;
+    width: 100%;
+    display: inline-flex;
+    z-index: 7;
+  }
+
+  .social-list-items {
+    margin: auto;
+    padding-bottom: 8px;
+  }
+
+  .social-links {
+    font-family:
+      "Carrois Gothic", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    color: #246d90;
+    font-size: 2em;
   }
 }
